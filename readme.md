@@ -1,6 +1,6 @@
 ## Example
 
-```
+```html
 						<calculator settings='{
 							"items": [
 								{
@@ -40,6 +40,9 @@
 						}'>
 						</calculator>
 ```
+
+![example](http://prntscr.com/7yeuwj)
+
 
 ## Roadmap
 
