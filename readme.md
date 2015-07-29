@@ -41,7 +41,7 @@
 						</calculator>
 ```
 
-![example](http://prntscr.com/7yeuwj)
+![example](http://i.imgur.com/EQZDHxH.png)
 
 
 ## Roadmap
