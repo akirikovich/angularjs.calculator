@@ -14,47 +14,46 @@
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3">
 					<h1>Calculator example</h1>
+
 					<div class="well">
-						<form action="" ng-controller="calculatorController as calculator">
-							<div class="form-group">
-								<input type="number" ng-change="calculator.calc()" min="1" max="20" class="form-control" ng-model="calculator.count" placeholder="Pages for markup" >
-							</div>
-							<div class="form-group">
-								<label>Work speed</label>
-								<input type="range" ng-change="calculator.calc()" min="0" max="10" ng-model="calculator.speed" placeholder="Deadline" >
-							</div>
-							<div class="form-group">
-								<select ng-model="calculator.cms" ng-change="calculator.calc()" class="form-control">
-									<option value="1">Without CMS</option>
-									<option value="2">NetCat</option>
-									<option value="3">1C Bitrix</option>
-									<option value="4">Wordpress</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<h4>Additional</h4>
-								<div class="form-group">
-									<label class="checkbox-inline">
-										<input type="checkbox" ng-model="calculator.responsive" ng-change="calculator.calc()">
-										Responsive
-									</label>
-									<label class="checkbox-inline">
-										<input type="checkbox" ng-model="calculator.retina" ng-change="calculator.calc()">
-										Retina ready
-									</label>
-									<label class="checkbox-inline">
-										<input type="checkbox" ng-model="calculator.microdata" ng-change="calculator.calc()">
-										Microdata Schema.org
-									</label>
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="alert alert-success">
-									<b>Result:</b>
-									<span>{{calculator.result | currency}}</span>
-								</div>
-							</div>
-						</form>
+						<calculator settings='{
+							"items": [
+								{
+									"field": {
+										"type": "number",
+										"model": "count"
+									}
+								}, {
+									"label": "Work speed",
+									"field": {
+										"type": "range",
+										"model": "speed",
+										"attrs": {
+											"min": "1",
+											"max": "10"
+										}
+									}
+								}, {
+									"field": {
+										"type": "select",
+										"model": "cms",
+										"options": {
+											"Without CMS": "1",
+											"NetCat": "2",
+											"1C Bitrix": "3",
+											"Wordpress": "4"
+										}
+									}
+								}, {
+									"label": "Responsive",
+									"field": {
+										"type": "checkbox",
+										"model": "responsive"
+									}
+								}
+							]
+						}'>
+						</calculator>
 					</div>
 				</div>
 			</div>
