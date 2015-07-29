@@ -1,6 +1,6 @@
 ## Example
 
-<pre><code>
+```
 						<calculator settings='{
 							"items": [
 								{
@@ -39,7 +39,7 @@
 							]
 						}'>
 						</calculator>
-</code></pre>
+```
 
 ## Roadmap
 
